@@ -29,4 +29,13 @@ class PostService
     {
         return $this->postRepository->getTitle($id, $default);
     }
+
+    public function showAllPosts()
+    {
+        $posts = $this->postRepository->getAllPosts();
+
+        foreach ($posts as $index => $post) {
+            echo($post->title);
+        }
+    }
 }
