@@ -46,7 +46,7 @@ class PostServiceUnitTest extends TestCase
             ->andReturn('no title');
 
         /** act */
-        $actual = $this->target->showTitle(4, 'no title');
+        $actual = App::make(PostService::class)->showTitle(4, 'no title');
 
         /** assert */
         $this->assertEquals('no title', $actual);
