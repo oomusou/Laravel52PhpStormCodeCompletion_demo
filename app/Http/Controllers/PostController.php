@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\PostService;
+use Config;
 
 class PostController extends Controller
 {
@@ -29,6 +30,7 @@ class PostController extends Controller
     public function index($id)
     {
         $data['title'] = $this->postService->showTitle($id, 'no title');
+        Config::get('app.locale');
         return view('post.index', $data);
     }
 }
