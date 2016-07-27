@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('post/{id}', [
-    'as'   => 'post',
+    'as'   => 'post.index',
     'uses' => 'PostController@index'
 ]);
+
