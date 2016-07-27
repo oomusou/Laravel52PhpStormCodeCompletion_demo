@@ -46,6 +46,7 @@ class PostServiceUnitTest extends TestCase
             ->andReturn('no title');
 
         /** act */
+        $file = __DIR__ . '';
         $actual = App::make(PostService::class)->showTitle(4, 'no title');
 
         /** assert */
