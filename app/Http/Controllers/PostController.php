@@ -30,7 +30,5 @@ class PostController extends Controller
     {
         $data['title'] = $this->postService->showTitle($id, 'no title');
         return view('post.index', $data);
-
-
     }
 }
