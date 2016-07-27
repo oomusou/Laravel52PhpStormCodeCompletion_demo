@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace App\Repositories;
 
 use App\Post;
+use Illuminate\Database\Eloquent\Collection;
 
 class PostRepository
 {
@@ -19,5 +20,13 @@ class PostRepository
             ->get()
             ->first(null, new Post(['title' => $default]))
             ->title;
+    }
+
+    /**
+     * @return Collection|Post[]
+     */
+    public function getAllPosts() : Collection
+    {
+        return Post::all();
     }
 }
